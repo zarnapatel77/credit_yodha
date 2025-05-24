@@ -26,4 +26,10 @@ class AppString{
   static const String keyPrivacyPolicy = 'privacy policy \n ';
   static const String keyAnd = 'and ';
   static const String keyTermsCondition = 'terms & condition';
+  static const String keyVerification = 'Verification';
+  static const String keyEnterOTPHere = 'Enter OTP Here!';
+  static const String keyWeHaveSentOnOTPTo = 'We have sent on OTP to';
+  static const String keyViaSMS = 'via SMS';
+  static const String keyRequestNewOTP = 'Request new OTP';
+  static const String keyResendOTP = 'Resend OTP';
 }

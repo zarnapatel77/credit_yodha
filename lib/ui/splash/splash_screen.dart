@@ -1,3 +1,4 @@
+import 'package:credit_yodha/ui/auth/login_screen.dart';
 import 'package:credit_yodha/ui/onboarding/onboarding_screen.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
 import 'package:credit_yodha/ui/utils/common/common_text.dart';
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(milliseconds: 300), () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const OnboardingScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
     super.initState();
