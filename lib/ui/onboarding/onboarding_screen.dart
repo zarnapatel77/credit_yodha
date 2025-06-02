@@ -1,4 +1,5 @@
 import 'package:credit_yodha/ui/auth/login_screen.dart';
+import 'package:credit_yodha/ui/utils/app_assets.dart';
 import 'package:credit_yodha/ui/utils/app_colors.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
 import 'package:credit_yodha/ui/utils/common/common_text.dart';
@@ -35,9 +36,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   List<String> onboardingImage = [
-    'assets/png/onboarding_1.png',
-    'assets/png/onboarding_2.png',
-    'assets/png/onboarding_3.png',
+   AppAssets.Onboarding1,
+   AppAssets.Onboarding2,
+   AppAssets.Onboarding3,
   ];
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:credit_yodha/ui/auth/otp_verificationscreen.dart';
+import 'package:credit_yodha/ui/utils/app_assets.dart';
 import 'package:credit_yodha/ui/utils/app_colors.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
 import 'package:credit_yodha/ui/utils/common/common_text.dart';
@@ -39,9 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SvgPicture.asset(
-                  'assets/svg/app_logo.svg',
-                  width: 121.6.w,
-                  height: 50.27.h,
+                  AppAssets.AppLogo,height: 50.27.h, width: 121.6.w,
                 ),
                 SizedBox(height: 4.56.h),
               ],
@@ -269,7 +268,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: EdgeInsets.only(right: 10.0.w),
                         child: Center(
                           child: Image.asset(
-                            'assets/png/google_logo.png',
+                            AppAssets.GoogleLogo,
                             width: 20.87.w,
                             height: 21.29.h,
                           ),

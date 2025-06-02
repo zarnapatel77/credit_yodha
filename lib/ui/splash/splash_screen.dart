@@ -1,5 +1,6 @@
 import 'package:credit_yodha/ui/auth/login_screen.dart';
 import 'package:credit_yodha/ui/onboarding/onboarding_screen.dart';
+import 'package:credit_yodha/ui/utils/app_assets.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
 import 'package:credit_yodha/ui/utils/common/common_text.dart';
 import 'package:credit_yodha/ui/utils/text_style.dart';
@@ -37,10 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             const Spacer(),
             SvgPicture.asset(
-                'assets/svg/app_logo.svg',
-                width: 140,
-                height: 58,
-                semanticsLabel: 'App Logo',
+                AppAssets.AppLogo, height: 58.h, width: 140.w
             ),
             const Spacer(),
             CommonText(

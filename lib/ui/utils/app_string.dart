@@ -32,4 +32,14 @@ class AppString{
   static const String keyViaSMS = 'via SMS';
   static const String keyRequestNewOTP = 'Request new OTP';
   static const String keyResendOTP = 'Resend OTP';
+  static const String keyVerifyAndProcess = 'Verify and Process';
+  static const String keyYourOTPVerificationIsComplete = 'Your OTP verification is complete! \n ';
+  static const String keyOTPVerificationParagraph = 'Thank you for choosing CreditYodha! we look forward to serving you and providing an exceptional user experience.';
+  static const String keyCompleteYourProfile = 'Complete your Profile \n ';
+  static const String keyFillInAllTheProfileDetails = 'Fill in all the profile details to get the best \n app experience.';
+  static const String keyFullName = 'Full Name';
+  static const String keySelectYourGender = 'Select Your Gender';
+  static const String keyMale = 'Male';
+  static const String keyFemale = 'Female';
+  static const String keyOther = 'Other';
 }

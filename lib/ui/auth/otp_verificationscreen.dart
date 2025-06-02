@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:credit_yodha/ui/auth/complet_profile.dart';
+import 'package:credit_yodha/ui/auth/helper/otp_verification_conformation_dialog.dart';
 import 'package:credit_yodha/ui/utils/app_assets.dart';
 import 'package:credit_yodha/ui/utils/app_colors.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
+import 'package:credit_yodha/ui/utils/common/common_button.dart';
 import 'package:credit_yodha/ui/utils/common/common_text.dart';
 import 'package:credit_yodha/ui/utils/context_extension.dart';
 import 'package:credit_yodha/ui/utils/padding_extension.dart';
@@ -76,7 +79,10 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
       ),
       body: Column(
         children: [
-          Center(child: Lottie.asset(AppAssets.otpLottie, height: context.height * 0.088, width: context.height * 0.088)),
+          Center(
+              child:
+              Lottie.asset(AppAssets.otpLottie, height: context.height * 0.088, width: context.height * 0.088)
+          ),
           SizedBox(
             height: 42.h,
           ),
@@ -166,7 +172,42 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 ),
               }
             ],
-          )
+          ),
+          const Spacer(),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Container(
+          //       height: 50.h,
+          //       width: 250.w,
+          //       decoration: BoxDecoration(color: AppColors.primary,borderRadius: BorderRadius.circular(10)),
+          //       child: CommonText(
+          //         textAlign: TextAlign.center,
+          //           title: AppString.keyVerifyAndProcess,
+          //         textStyle: TextStyles.regular.copyWith(color: AppColors.white),
+          //       ),
+          //     ),
+          //   ],
+          // )
+          CommonButton(
+              onTap: (){
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const OtpVerificationConformationDialog();
+                  },
+                );
+                Future.delayed(const Duration(seconds: 2),() {
+                  Navigator.of(context).pop();
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                    return const CompletProfile();
+                  }));
+                });
+
+              },
+          title:
+            AppString.keyVerifyAndProcess
+          ),
         ],
       ).paddingAll(20.w),
     );
