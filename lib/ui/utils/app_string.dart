@@ -42,4 +42,8 @@ class AppString{
   static const String keyMale = 'Male';
   static const String keyFemale = 'Female';
   static const String keyOther = 'Other';
+  static const String keyUsername = 'Username';
+  static const String keyYouCertifyThatTheInformation = 'You certify that the information provided during the sign-up process is accurate and complete. You are responsible for maintaining the confidentiality of your account credentials.';
+  static const String keyCongratulationsYouHaveSignedUp = 'Congratulations! you have signed up';
+  static const String keyCompleteProfileParagraph = 'Enjoy your time with us and make the most of our apps incredible offerings. happy exploring! ';
 }
