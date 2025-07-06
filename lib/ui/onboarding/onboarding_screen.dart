@@ -247,7 +247,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   title: AppString.keyGetStart,
                                     textStyle: TextStyles.regular.copyWith(color: AppColors.white),
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.arrow_forward_rounded,
                                   color: AppColors.white,
                                 ),

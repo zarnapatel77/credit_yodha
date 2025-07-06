@@ -1,4 +1,5 @@
 import 'package:credit_yodha/ui/auth/login_screen.dart';
+import 'package:credit_yodha/ui/home/home_dashbord.dart';
 import 'package:credit_yodha/ui/onboarding/onboarding_screen.dart';
 import 'package:credit_yodha/ui/utils/app_assets.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(milliseconds: 300), () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => const ImageCarouselApp()),
       );
     });
     super.initState();
@@ -41,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 AppAssets.AppLogo, height: 58.h, width: 140.w
             ),
             const Spacer(),
-            CommonText(
+            const CommonText(
               title: AppString.keyMadeWithLoveInIndia,),
             const SizedBox(
               height: 20,

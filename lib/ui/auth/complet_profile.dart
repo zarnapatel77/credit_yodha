@@ -1,4 +1,6 @@
 import 'package:credit_yodha/ui/auth/helper/complet_profile_conformation_dialog.dart';
+import 'package:credit_yodha/ui/auth/terms_and_conditions_screen.dart';
+import 'package:credit_yodha/ui/home/home_dashbord.dart';
 import 'package:credit_yodha/ui/utils/app_colors.dart';
 import 'package:credit_yodha/ui/utils/app_string.dart';
 import 'package:credit_yodha/ui/utils/common/common_button.dart';
@@ -298,16 +300,33 @@ class _CompletProfileState extends State<CompletProfile> {
                   ).paddingOnly(left: 16.w, right: 16.w),
                 ),
                 Expanded(
-                  child: CommonText(
-                    textOverflow: TextOverflow.ellipsis,
-                    maxLines: 5,
-                    title: AppString.keyYouCertifyThatTheInformation,
-                    textStyle: TextStyles.regular.copyWith(
-                      color: AppColors.clrB5B5B5,
-                      fontSize: 12.sp,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push( context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => TermsAndConditionsScreen(),
+                        ),
+                      );
+                    },
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                          style: TextStyle(fontSize: 14.0), // base style
+                          children: [
+                      TextSpan(
+                      text:
+                      AppString.keyYouCertifyThatTheInformation,
+                      style: TextStyles.regular.copyWith(color: AppColors.clrB5B5B5),
                     ),
+                    TextSpan(
+                      text: AppString.keyTermsAndConditions,
+                      style: TextStyles.bold.copyWith(color: AppColors.primary),
+                    ),
+                    ],
+                                    ),
+                        ),
                   ),
-                ),
+                  ),
               ],
             ),
             SizedBox(
@@ -324,7 +343,7 @@ class _CompletProfileState extends State<CompletProfile> {
                   Future.delayed(const Duration(seconds: 2),() {
                     Navigator.of(context).pop();
                     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-                      return const CompletProfile();
+                      return const ImageCarouselApp();
                     }));
                   });
                 },
